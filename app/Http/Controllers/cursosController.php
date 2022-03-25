@@ -40,7 +40,7 @@ class cursosController extends Controller
         $newCursos = new cursos();
         $newCursos->Name = $request->Name;
         $newCursos->Date_start = $request->Date_start;
-        $newCursos->Date_end = $request->Dane_end;
+        $newCursos->Date_end = $request->Date_end;
         $newCursos->save();
     }
 
