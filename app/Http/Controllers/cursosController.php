@@ -75,10 +75,10 @@ class cursosController extends Controller
      */
     public function update(Request $request)
     {
-        $updateCursos = cursos::findOrFail($request->id);
+        $updateCursos = cursos::findOrFail($request->Id);
         $updateCursos->Name = $request->Name;
         $updateCursos->Date_start = $request->Date_start;
-        $updateCursos->Date_end = $request->Dane_end;
+        $updateCursos->Date_end = $request->Date_end;
         $updateCursos->save();
         return $updateCursos;
     }
@@ -89,7 +89,7 @@ class cursosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Request $request)
     {
         $destroyCursos = cursos::destroy($request->id);
         return $destroyCursos;
